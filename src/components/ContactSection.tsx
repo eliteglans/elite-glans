@@ -86,98 +86,98 @@ const ContactSection = () => {
             method="POST"
             className="bg-card rounded-lg p-8 shadow-soft border border-border space-y-5"
           >
-            {/* Name */}
-            <div>
-              <label className="text-sm font-medium text-foreground block mb-1.5">
-                {t('Namn', 'Name')} *
-              </label>
-              <input
-                type="text"
-                name="name"
-                required
-                className="w-full h-11 px-4 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder={t('Ditt namn', 'Your name')}
-              />
-            </div>
+    {/* Name */}
+  <div>
+    <label className="text-sm font-medium text-foreground block mb-1.5">
+      {t('Namn', 'Name')} *
+    </label>
+    <input
+      type="text"
+      name="name"
+      required
+      className="w-full h-11 px-4 rounded-md border border-gray-300 bg-white text-black text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder={t('Ditt namn', 'Your name')}
+    />
+  </div>
 
-            {/* Phone */}
-            <div>
-              <label className="text-sm font-medium text-foreground block mb-1.5">
-                {t('Telefonnummer', 'Phone number')} *
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                required
-                className="w-full h-11 px-4 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder={t('Ditt telefonnummer', 'Your phone number')}
-              />
-            </div>
+  {/* Phone */}
+  <div>
+    <label className="text-sm font-medium text-foreground block mb-1.5">
+      {t('Telefonnummer', 'Phone number')} *
+    </label>
+    <input
+      type="tel"
+      name="phone"
+      required
+      className="w-full h-11 px-4 rounded-md border border-gray-300 bg-white text-black text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder={t('Ditt telefonnummer', 'Your phone number')}
+    />
+  </div>
 
-            {/* Email */}
-            <div>
-              <label className="text-sm font-medium text-foreground block mb-1.5">
-                E-post *
-              </label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full h-11 px-4 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder={t('Din e-post', 'Your email')}
-              />
-            </div>
+  {/* Email */}
+  <div>
+    <label className="text-sm font-medium text-foreground block mb-1.5">
+      E-post *
+    </label>
+    <input
+      type="email"
+      name="email"
+      required
+      className="w-full h-11 px-4 rounded-md border border-gray-300 bg-white text-black text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder={t('Din e-post', 'Your email')}
+    />
+  </div>
 
-            {/* Service */}
-            <div>
-              <label className="text-sm font-medium text-foreground block mb-1.5">
-                {t('Typ av tjänst', 'Type of service')}
-              </label>
-              <select
-                name="service"
-                className="w-full h-11 px-4 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              >
-                <option value="">
-                  {t('Välj tjänst...', 'Select service...')}
-                </option>
-                <option value="Hemstädning">
-                  {t('Hemstädning', 'Home Cleaning')}
-                </option>
-                <option value="Storstädning">
-                  {t('Storstädning', 'Deep Cleaning')}
-                </option>
-                <option value="Lokalstädning">
-                  {t('Lokalstädning', 'Commercial Cleaning')}
-                </option>
-              </select>
-            </div>
+  {/* Service */}
+  <div>
+    <label className="text-sm font-medium text-foreground block mb-1.5">
+      {t('Typ av tjänst', 'Type of service')}
+    </label>
+    <select
+      name="service"
+      className="w-full h-11 px-4 rounded-md border border-gray-300 bg-white text-black text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      <option value="">
+        {t('Välj tjänst...', 'Select service...')}
+      </option>
+      <option value="Hemstädning">
+        {t('Hemstädning', 'Home Cleaning')}
+      </option>
+      <option value="Storstädning">
+        {t('Storstädning', 'Deep Cleaning')}
+      </option>
+      <option value="Lokalstädning">
+        {t('Lokalstädning', 'Commercial Cleaning')}
+      </option>
+    </select>
+  </div>
 
-            {/* Message */}
-            <div>
-              <label className="text-sm font-medium text-foreground block mb-1.5">
-                {t('Meddelande', 'Message')}
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                placeholder={t(
-                  'Berätta om dina behov...',
-                  'Tell us about your needs...'
-                )}
-              />
-            </div>
+  {/* Message */}
+  <div>
+    <label className="text-sm font-medium text-foreground block mb-1.5">
+      {t('Meddelande', 'Message')}
+    </label>
+    <textarea
+      name="message"
+      rows={4}
+      className="w-full px-4 py-3 rounded-md border border-gray-300 bg-white text-black text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+      placeholder={t(
+        'Berätta om dina behov...',
+        'Tell us about your needs...'
+      )}
+    />
+  </div>
 
-            {/* Submit */}
-            <Button
-              type="submit"
-              variant="default"
-              className="w-full"
-              size="lg"
-            >
-              {t('Skicka förfrågan', 'Send request')}
-            </Button>
-          </form>
+  {/* Submit */}
+  <Button
+    type="submit"
+    variant="default"
+    className="w-full"
+    size="lg"
+  >
+    {t('Skicka förfrågan', 'Send request')}
+  </Button>
+</form>
         </div>
       </div>
     </section>
